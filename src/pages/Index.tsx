@@ -13,13 +13,27 @@ const Index = () => {
       <TopBanner />
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-28 pb-20 bg-gradient-to-b from-app-darker to-app-dark min-h-screen flex items-center">
-        <div className="container mx-auto px-6">
-          <div className="bg-blue-500 text-white px-3 py-1 rounded-full inline-block mb-4">
+      {/* Hero Section with Video Background */}
+      <section className="relative pt-28 pb-20 min-h-screen flex items-center overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            className="object-cover w-full h-full opacity-40"
+          >
+            <source src="https://cdn.dribbble.com/users/1030568/screenshots/7121868/media/fcbc48289eb63dff1bad44e17c842ef1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-app-darker to-app-dark opacity-80"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="bg-blue-500 text-white px-3 py-1 rounded-full inline-block mb-4 animate-fade-in">
             Uncover proof of Appinventiv's impact across 3000+ digital deliveries for 35+ industries.
-            <a href="/lets-talk-ai" className="ml-2 font-medium hover:underline transition-all">
-              Explore Now &gt;
+            <a href="/lets-talk-ai" className="ml-2 font-medium hover:underline transition-all group">
+              Explore Now <ArrowRight size={14} className="inline ml-1 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
           
@@ -32,9 +46,9 @@ const Index = () => {
             conquer complex challenges through innovation and agility.
           </p>
           
-          <button className="bg-app-blue text-white px-8 py-4 rounded-md hover:bg-blue-600 hover:scale-105 transition-all flex items-center gap-2 animate-fade-in">
+          <button className="bg-app-blue text-white px-8 py-4 rounded-md hover:bg-blue-600 hover:scale-105 transition-all flex items-center gap-2 animate-fade-in group">
             Consult Our Experts
-            <ArrowRight size={18} />
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </section>
@@ -111,8 +125,8 @@ const Index = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to innovate and drive an impact?</h3>
               </div>
               <div className="flex justify-end">
-                <button className="bg-app-blue text-white px-6 py-3 rounded-md hover:bg-blue-600 hover:scale-105 transition-all">
-                  Partner With Us
+                <button className="bg-app-blue text-white px-6 py-3 rounded-md hover:bg-blue-600 hover:scale-105 transition-all group">
+                  Partner With Us <ArrowRight size={18} className="inline ml-1 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
@@ -120,7 +134,7 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Case Study Section */}
+      {/* Case Study Section with Adidas Image */}
       <CaseStudy
         title="Adidas"
         subtitle="Scores the perfect digital landing in UAE"
@@ -136,6 +150,7 @@ const Index = () => {
             description: "New users acquired"
           }
         ]}
+        imageSrc="/lovable-uploads/585eaf11-ce37-415d-9f00-9a4c0ed4ca13.png"
       />
       
       <ChatIcon />
