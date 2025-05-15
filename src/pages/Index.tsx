@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import ChatIcon from '../components/ChatIcon';
+import TopBanner from '../components/TopBanner';
 import StatsCard from '../components/StatsCard';
 import CaseStudy from '../components/CaseStudy';
 import { ArrowRight } from 'lucide-react';
@@ -9,6 +10,7 @@ import { ArrowRight } from 'lucide-react';
 const Index = () => {
   return (
     <>
+      <TopBanner />
       <Navbar />
       
       {/* Hero Section */}
@@ -16,21 +18,21 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="bg-blue-500 text-white px-3 py-1 rounded-full inline-block mb-4">
             Uncover proof of Appinventiv's impact across 3000+ digital deliveries for 35+ industries.
-            <a href="#" className="ml-2 font-medium">
+            <a href="/lets-talk-ai" className="ml-2 font-medium hover:underline transition-all">
               Explore Now &gt;
             </a>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 max-w-4xl">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 max-w-4xl animate-fade-in">
             Meet The Digital Drivers Of Global Disruptors
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-3xl mb-12">
+          <p className="text-xl text-gray-300 max-w-3xl mb-12 animate-fade-in">
             We catalyze business growth by reimagining digital experiences that 
             conquer complex challenges through innovation and agility.
           </p>
           
-          <button className="bg-app-blue text-white px-8 py-4 rounded-md hover:bg-blue-600 transition-colors flex items-center gap-2">
+          <button className="bg-app-blue text-white px-8 py-4 rounded-md hover:bg-blue-600 hover:scale-105 transition-all flex items-center gap-2 animate-fade-in">
             Consult Our Experts
             <ArrowRight size={18} />
           </button>
@@ -41,19 +43,19 @@ const Index = () => {
       <section className="py-8 bg-app-dark border-t border-b border-gray-800">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-            <div className="text-center">
+            <div className="text-center hover:scale-110 transition-all">
               <div className="text-white opacity-70 font-semibold">Clutch 100</div>
             </div>
-            <div className="text-center">
+            <div className="text-center hover:scale-110 transition-all">
               <div className="text-white opacity-70 font-semibold">Deloitte 50</div>
             </div>
-            <div className="text-center">
+            <div className="text-center hover:scale-110 transition-all">
               <div className="text-white opacity-70 font-semibold">Entrepreneur</div>
             </div>
-            <div className="text-center">
+            <div className="text-center hover:scale-110 transition-all">
               <div className="text-white opacity-70 font-semibold">India's Growth Champions</div>
             </div>
-            <div className="text-center">
+            <div className="text-center hover:scale-110 transition-all">
               <div className="text-white opacity-70 font-semibold">Business Awards</div>
             </div>
           </div>
@@ -64,12 +66,12 @@ const Index = () => {
       <section className="py-20 bg-app-dark">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
+            <div className="animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transforming Businesses With Technology That Transcends Geographies And Platforms
               </h2>
             </div>
-            <div>
+            <div className="animate-fade-in">
               <p className="text-lg text-gray-300">
                 Appinventiv is one of the world's largest IT service providers helping 
                 companies redefine their digital possibilities for nearly a decade now. With 
@@ -103,13 +105,13 @@ const Index = () => {
             />
           </div>
           
-          <div className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg p-8">
+          <div className="mt-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg p-8 hover:bg-gradient-to-r hover:from-gray-700 hover:to-gray-800 transition-colors">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to innovate and drive an impact?</h3>
               </div>
               <div className="flex justify-end">
-                <button className="bg-app-blue text-white px-6 py-3 rounded-md hover:bg-blue-600 transition-colors">
+                <button className="bg-app-blue text-white px-6 py-3 rounded-md hover:bg-blue-600 hover:scale-105 transition-all">
                   Partner With Us
                 </button>
               </div>
@@ -135,119 +137,6 @@ const Index = () => {
           }
         ]}
       />
-      
-      {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-r from-app-darker to-app-dark">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-10">Let's Spark A Transformative Conversation</h2>
-              
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-white rounded-full p-1 mt-1">
-                    <div className="bg-app-blue rounded-full w-5 h-5 flex items-center justify-center text-white">✓</div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-white mb-2">Get A Consultation</h3>
-                    <p className="text-gray-300">
-                      Discuss your project idea with our AI solutions provider to know the intricacies of your project.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="bg-white rounded-full p-1 mt-1">
-                    <div className="bg-app-blue rounded-full w-5 h-5 flex items-center justify-center text-white">✓</div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-white mb-2">Get A Quotation</h3>
-                    <p className="text-gray-300">
-                      Based on your project, we will share a proposal for cost and timeline estimates.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="bg-white rounded-full p-1 mt-1">
-                    <div className="bg-app-blue rounded-full w-5 h-5 flex items-center justify-center text-white">✓</div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-white mb-2">Project Kickoff</h3>
-                    <p className="text-gray-300">
-                      Sign the contract and form a partnership with us to kick-start your project.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg p-8">
-              <form className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full p-3 border-b border-gray-300 focus:border-app-blue outline-none"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email*"
-                    className="w-full p-3 border-b border-gray-300 focus:border-app-blue outline-none"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="Contact Number*"
-                    className="w-full p-3 border-b border-gray-300 focus:border-app-blue outline-none"
-                    required
-                  />
-                </div>
-                <div>
-                  <select
-                    className="w-full p-3 border-b border-gray-300 focus:border-app-blue outline-none"
-                  >
-                    <option value="">Select a Budget Range</option>
-                    <option value="0-10k">$0 - $10,000</option>
-                    <option value="10k-25k">$10,000 - $25,000</option>
-                    <option value="25k-50k">$25,000 - $50,000</option>
-                    <option value="50k-100k">$50,000 - $100,000</option>
-                    <option value="100k+">$100,000+</option>
-                  </select>
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Describe Your Project/Idea In Brief (Helps Us Come Back Better Prepared)"
-                    rows={4}
-                    className="w-full p-3 border-b border-gray-300 focus:border-app-blue outline-none resize-none"
-                  ></textarea>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <p className="text-gray-600">2 + 3 = </p>
-                  <input
-                    type="text"
-                    className="w-20 p-2 border-b border-gray-300 focus:border-app-blue outline-none"
-                  />
-                </div>
-                
-                <div className="pt-4">
-                  <button
-                    type="submit"
-                    className="w-full bg-app-blue text-white py-3 rounded-md hover:bg-blue-600 transition-colors"
-                  >
-                    Schedule Free Consultation
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
       
       <ChatIcon />
     </>
