@@ -5,6 +5,8 @@ import ChatIcon from '../components/ChatIcon';
 import { ArrowRight, Play } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from '../components/ui/card';
+import { ToggleGroup, ToggleGroupItem } from '../components/ui/toggle-group';
 
 const LetsTalkAI = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
