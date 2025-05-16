@@ -1,13 +1,35 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
-import ChatIcon from '../components/ChatIcon';
+import ChatWidget from '../components/ChatWidget';
 import TopBanner from '../components/TopBanner';
 import StatsCard from '../components/StatsCard';
 import CaseStudy from '../components/CaseStudy';
+import ClientTestimonial from '../components/ClientTestimonial';
+import ServicesSection from '../components/ServicesSection';
+import PartnersSection from '../components/PartnersSection';
+import AwardsSection from '../components/AwardsSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import IndustriesSection from '../components/IndustriesSection';
+import TechStackSection from '../components/TechStackSection';
+import StrategicPartnerships from '../components/StrategicPartnerships';
+import ContactForm from '../components/ContactForm';
+import FAQSection from '../components/FAQSection';
+import LocationsSection from '../components/LocationsSection';
+import FooterMenu from '../components/FooterMenu';
 import { ArrowRight } from 'lucide-react';
 
 const Index = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.error("Video play error:", error);
+      });
+    }
+  }, []);
+
   return (
     <>
       <TopBanner />
@@ -18,6 +40,7 @@ const Index = () => {
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video 
+            ref={videoRef}
             autoPlay 
             loop 
             muted 
@@ -153,7 +176,44 @@ const Index = () => {
         imageSrc="/lovable-uploads/585eaf11-ce37-415d-9f00-9a4c0ed4ca13.png"
       />
       
-      <ChatIcon />
+      {/* Client Testimonial Videos Section */}
+      <ClientTestimonial />
+      
+      {/* Services Section */}
+      <ServicesSection />
+      
+      {/* Partners Section */}
+      <PartnersSection />
+      
+      {/* Awards Section */}
+      <AwardsSection />
+      
+      {/* Client Testimonials Section */}
+      <TestimonialsSection />
+      
+      {/* Industries Section */}
+      <IndustriesSection />
+      
+      {/* Tech Stack Section */}
+      <TechStackSection />
+      
+      {/* Strategic Partnerships */}
+      <StrategicPartnerships />
+      
+      {/* Contact Form */}
+      <ContactForm />
+      
+      {/* FAQ Section */}
+      <FAQSection />
+      
+      {/* Locations Section */}
+      <LocationsSection />
+      
+      {/* Footer Menu */}
+      <FooterMenu />
+      
+      {/* Chat Widget (replaces static ChatIcon) */}
+      <ChatWidget />
     </>
   );
 };
