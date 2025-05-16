@@ -44,14 +44,16 @@ const Index = () => {
             autoPlay 
             loop 
             muted 
+            playsInline
             className="object-cover w-full h-full opacity-40"
           >
-            <source src="https://cdn.dribbble.com/users/1030568/screenshots/7121868/media/fcbc48289eb63dff1bad44e17c842ef1.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-app-darker to-app-dark opacity-80"></div>
         </div>
         
+        {/* Hero content */}
         <div className="container mx-auto px-6 relative z-10">
           <div className="bg-blue-500 text-white px-3 py-1 rounded-full inline-block mb-4 animate-fade-in">
             Uncover proof of Appinventiv's impact across 3000+ digital deliveries for 35+ industries.

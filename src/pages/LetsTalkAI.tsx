@@ -1,14 +1,9 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import TopBanner from '../components/TopBanner';
 import ChatIcon from '../components/ChatIcon';
-import { ArrowRight, ChevronDown, ChevronUp, Play } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '../components/ui/hover-card';
-import { Card, CardContent } from '../components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { ToggleGroup, ToggleGroupItem } from '../components/ui/toggle-group';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
 const LetsTalkAI = () => {
@@ -57,7 +52,7 @@ const LetsTalkAI = () => {
             playsInline
             className="object-cover w-full h-full opacity-30"
           >
-            <source src="https://cdn.dribbble.com/users/2973561/screenshots/5727211/focus-labs-dribbble.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-app-darker to-app-dark opacity-80"></div>
@@ -86,107 +81,6 @@ const LetsTalkAI = () => {
             Consult Our AI Experts
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
-      </section>
-      
-      {/* Video Section */}
-      <section className="py-20 bg-app-dark">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              See How These Leaders Became Our Proof Of AI Excellence
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              As a leading artificial intelligence consulting services provider, we take pride in the success stories we have created with our clients, 
-              demonstrating the real-world value of our cutting-edge AI services.
-            </p>
-          </div>
-          
-          <Carousel className="max-w-5xl mx-auto">
-            <CarouselContent>
-              {/* Case Study 1 */}
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-2">
-                  <div className="rounded-lg overflow-hidden hover-scale bg-gray-800">
-                    <img 
-                      src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2071&auto=format&fit=crop" 
-                      alt="Budget management tool" 
-                      className="w-full h-48 object-cover mb-4" 
-                    />
-                    <div className="p-4">
-                      <h3 className="text-xl font-bold text-white mb-2">Mudra</h3>
-                      <p className="text-gray-300 mb-4">
-                        We utilized AI to develop a chatbot-driven budget management tool, enabling users to track their spending effortlessly.
-                      </p>
-                      <div className="text-sm text-gray-400 mb-2">
-                        <span className="block font-bold text-blue-400 text-lg">12+</span>
-                        Countries Launched the Solution
-                      </div>
-                      <button className="text-app-blue flex items-center text-sm hover:text-blue-400 transition-colors group">
-                        Read Case Study <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-              
-              {/* Case Study 2 */}
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-2">
-                  <div className="rounded-lg overflow-hidden hover-scale bg-gray-800">
-                    <img 
-                      src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" 
-                      alt="JobGet platform" 
-                      className="w-full h-48 object-cover mb-4" 
-                    />
-                    <div className="p-4">
-                      <h3 className="text-xl font-bold text-white mb-2">JobGet</h3>
-                      <p className="text-gray-300 mb-4">
-                        We helped JobGet revolutionize the job market for blue-collar workers by creating an AI-driven employment platform.
-                      </p>
-                      <div className="text-sm text-gray-400 mb-2">
-                        <span className="block font-bold text-blue-400 text-lg">$52 Million</span>
-                        Series B Funding Raised
-                      </div>
-                      <button className="text-app-blue flex items-center text-sm hover:text-blue-400 transition-colors group">
-                        Read Case Study <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-              
-              {/* Case Study 3 */}
-              <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-2">
-                  <div className="rounded-lg overflow-hidden hover-scale bg-gray-800">
-                    <img 
-                      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop" 
-                      alt="Vyrb social media app" 
-                      className="w-full h-48 object-cover mb-4" 
-                    />
-                    <div className="p-4">
-                      <h3 className="text-xl font-bold text-white mb-2">Vyrb</h3>
-                      <p className="text-gray-300 mb-4">
-                        We developed Vyrb, an innovative AI-powered social media app that allows seamless audio messaging through Bluetooth wearables.
-                      </p>
-                      <div className="text-sm text-gray-400 mb-2">
-                        <span className="block font-bold text-blue-400 text-lg">50k+</span>
-                        App Downloads
-                      </div>
-                      <button className="text-app-blue flex items-center text-sm hover:text-blue-400 transition-colors group">
-                        Read Case Study <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-            <div className="flex justify-center gap-4 mt-8">
-              <CarouselPrevious className="static translate-y-0 hover:scale-110 bg-gray-800 border-none text-white" />
-              <CarouselNext className="static translate-y-0 hover:scale-110 bg-gray-800 border-none text-white" />
-            </div>
-          </Carousel>
         </div>
       </section>
       
