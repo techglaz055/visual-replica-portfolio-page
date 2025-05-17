@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import ChatWidget from '../components/ChatWidget';
@@ -37,7 +36,7 @@ const Index = () => {
       
       {/* Hero Section with Video Background */}
       <section className="relative pt-28 pb-20 min-h-screen flex items-center overflow-hidden">
-        {/* Video Background */}
+        {/* Video Background with improved quality settings */}
         <div className="absolute inset-0 z-0">
           <video 
             ref={videoRef}
@@ -45,33 +44,34 @@ const Index = () => {
             loop 
             muted 
             playsInline
-            className="object-cover w-full h-full opacity-40"
+            className="object-cover w-full h-full opacity-70"
+            style={{filter: 'brightness(0.8) contrast(1.1)'}}
           >
-            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-app-darker to-app-dark opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-app-darker/80 to-app-dark/90"></div>
         </div>
         
-        {/* Hero content */}
+        {/* Hero content with improved text visibility */}
         <div className="container mx-auto px-6 relative z-10">
-          <div className="bg-blue-500 text-white px-3 py-1 rounded-full inline-block mb-4 animate-fade-in">
+          <div className="bg-blue-600 text-white px-3 py-1 rounded-full inline-block mb-4 animate-fade-in shadow-lg">
             Uncover proof of Appinventiv's impact across 3000+ digital deliveries for 35+ industries.
             <a href="/lets-talk-ai" className="ml-2 font-medium hover:underline transition-all group">
               Explore Now <ArrowRight size={14} className="inline ml-1 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 max-w-4xl animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 max-w-4xl animate-fade-in drop-shadow-lg">
             Meet The Digital Drivers Of Global Disruptors
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-3xl mb-12 animate-fade-in">
+          <p className="text-xl text-white max-w-3xl mb-12 animate-fade-in drop-shadow-md">
             We catalyze business growth by reimagining digital experiences that 
             conquer complex challenges through innovation and agility.
           </p>
           
-          <button className="bg-app-blue text-white px-8 py-4 rounded-md hover:bg-blue-600 hover:scale-105 transition-all flex items-center gap-2 animate-fade-in group">
+          <button className="bg-app-blue text-white px-8 py-4 rounded-md hover:bg-blue-600 hover:scale-105 transition-all flex items-center gap-2 animate-fade-in group shadow-lg">
             Consult Our Experts
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>

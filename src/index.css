@@ -47,6 +47,31 @@
   }
 }
 
+/* High quality video settings */
+video {
+  -webkit-filter: brightness(1.05);
+  filter: brightness(1.05);
+}
+
+video.hero-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Text readability over video */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
